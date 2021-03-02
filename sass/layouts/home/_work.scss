@@ -1,0 +1,33 @@
+.work {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: center;
+    background-color: $primary-color;
+
+    &__pattern {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+    &__title {
+        position: relative;
+        z-index: 100;
+        @include titles;
+
+    }
+
+    &__button {
+        margin-top: 40px;
+        @include btns;
+
+        &--link {
+            @include btn-name;
+        }
+    }
+
+
+}

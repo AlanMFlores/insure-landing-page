@@ -1,0 +1,111 @@
+.hero {
+    position: relative;
+    width: 100vw;
+    background-color: $primary-color;
+
+    @include media (medium-dev) {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+
+    &__image--mobile {
+        object-fit: cover;
+        width: 100%;
+
+        @include media (medium-dev) {
+            display: none;
+        }
+
+    }
+
+    &__image--desktop {
+        display: none;
+
+        @include media (medium-dev) {
+            display: block;
+            width: 50%;
+        }
+    }
+
+    &__intro {
+
+        position: relative;
+        width: 100%;
+        padding: 0 40px;
+        margin: 0 auto;
+        text-align: center;
+
+        &--mobile-left {
+            position: absolute;
+            top: -60px;
+            left: 0;
+            z-index: 10;
+
+            @include media (medium-dev) {
+                top: -25px;
+            }
+
+            @include media (large-dev) {
+                display: none;
+            }
+        }
+
+        &--mobile-right {
+            position: absolute;
+            right: 0;
+            bottom: -200px;
+
+            @include media (medium-dev) {
+                right: -100%;
+            }
+
+            @include media (large-dev) {
+                display: none;
+            }
+        }
+
+        &--desktop-left {
+            display: none;
+
+            @include media (large-dev) {
+                display: block;
+                position: absolute;
+            }
+        }
+
+        &--desktop-right {
+            display: none;
+
+            @include media (large-dev) {
+                display: block;
+                position: absolute;
+            }
+        }
+
+        &--title {
+            @include titles;
+            margin: 60px 0 20px 0;
+            position: relative;
+            z-index: 100;
+        }
+
+        &--description {
+            @include copy;
+            color: $light-gray-color;
+            margin-bottom: 40px;
+        }
+
+    }
+
+    &__button {
+        @include btns;
+        margin-bottom: 60px;   
+    }
+
+    &__button--link {
+        @include btn-name;
+    }
+
+}

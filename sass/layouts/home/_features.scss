@@ -1,0 +1,66 @@
+.features {
+    margin-bottom: 140px;
+
+    hr {
+        margin: 140px auto 40px auto;
+        width: 40%;
+        
+    }
+
+    &__title {
+        @include titles;
+        color: $dark-color;
+        margin-bottom: 60px;
+        
+        &::after {
+            content: " ";
+            border-top: 1px solid $dark-color;
+        }
+    }
+    
+    &__process {
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+
+        &--title {
+            margin-top: 40px;
+            @include subtitles;
+        }
+
+        &--description {
+            margin: 20px auto 60px auto;
+            color: $dark-gray-color;
+            @include copy;
+        }
+    }
+
+    &__prices {
+        @extend .features__process;
+
+        &--title {
+            margin-top: 40px;
+            @include subtitles;
+        }
+
+        &--description {
+            @extend .features__process--description;
+            @include copy;
+        }
+    }
+
+    &__people {
+        @extend .features__process;
+
+        &--title {
+            margin-top: 40px;
+            @include subtitles;
+        }
+
+        &--description {
+            @extend .features__process--description;
+            @include copy;
+        }
+    }
+
+}

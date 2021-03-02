@@ -1,0 +1,64 @@
+.header {
+    width: 100vw;
+    height: auto;
+    padding: 10px 20px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media (large-dev) {
+        padding: 10px 200px 20px 200px;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu--hamburger {
+        width: 20px;
+
+        @include media (large-dev) {
+            display: none;
+        }
+    }
+
+    &__menu--list {
+        display: none;
+
+        @include media (large-dev) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__menu--list-item {
+        @include media (large-dev) {
+            margin-right: 20px;
+            text-transform: uppercase;
+            font-size: $font-size-copy;
+
+            a {
+                color: $dark-gray-color;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__menu--plans {
+        display: none;
+
+        @include media (large-dev) {
+
+            display: block;
+            
+            @include btns;
+            border: 2px solid $dark-color;
+    
+            a {
+                @include btn_name;
+                color: $dark-color;
+            }
+        }
+    }
+}

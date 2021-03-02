@@ -1,0 +1,16 @@
+{
+  "name": "insure-landing-page",
+  "version": "1.0.0",
+  "description": "![Design preview for the Insure landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch sass/styles.scss css/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

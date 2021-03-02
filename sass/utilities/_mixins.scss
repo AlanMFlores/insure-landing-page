@@ -1,0 +1,36 @@
+@mixin titles {
+    font-family: $font-family-title;
+    font-size: $font-size-title;
+    line-height: $line-height-title;
+    color: $light-gray-color;
+    font-weight: 400;
+    text-align: center;
+}
+
+@mixin subtitles {
+    font-family: $font-family-title;
+    font-size: $font-size-subtitle;
+    olor: $dark-color;
+}
+
+@mixin copy {
+    font-family: $font-family-copy;
+    font-size: $font-size-copy;
+    line-height: $line-height-copy;
+    letter-spacing: 0.5px;
+}
+
+@mixin btns {
+    padding: 8px 24px;
+    border: 2px solid $light-gray-color;
+    background-color: transparent;
+}
+
+@mixin btn-name {
+    color: $light-gray-color;
+    font-family: $font-family-copy;
+    font-size: $font-size-copy;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    
+}

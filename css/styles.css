@@ -72,12 +72,16 @@ li {
 .hero {
   position: relative;
   width: 100vw;
-  background-color: #2d2640; }
+  background-color: #2d2640;
+  background-image: url(/images/bg-pattern-intro-left-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 0; }
   @media only screen and (min-width: 768px) {
     .hero {
       display: flex;
       align-items: center;
-      flex-direction: row-reverse; } }
+      flex-direction: row-reverse;
+      background-image: none; } }
   .hero__image--mobile {
     object-fit: cover;
     width: 100%; }
@@ -96,21 +100,11 @@ li {
     padding: 0 40px;
     margin: 0 auto;
     text-align: center; }
-    .hero__intro--mobile-left {
-      position: absolute;
-      top: -60px;
-      left: 0;
-      z-index: 10; }
-      @media only screen and (min-width: 768px) {
-        .hero__intro--mobile-left {
-          top: -25px; } }
-      @media only screen and (min-width: 992px) {
-        .hero__intro--mobile-left {
-          display: none; } }
     .hero__intro--mobile-right {
       position: absolute;
       right: 0;
-      bottom: -200px; }
+      bottom: -200px;
+      z-index: 10; }
       @media only screen and (min-width: 768px) {
         .hero__intro--mobile-right {
           right: -100%; } }
@@ -119,10 +113,13 @@ li {
           display: none; } }
     .hero__intro--desktop-left {
       display: none; }
-      @media only screen and (min-width: 992px) {
+      @media only screen and (min-width: 768px) {
         .hero__intro--desktop-left {
           display: block;
-          position: absolute; } }
+          position: absolute;
+          width: 20%;
+          left: 0;
+          top: 70%; } }
     .hero__intro--desktop-right {
       display: none; }
       @media only screen and (min-width: 992px) {
@@ -147,10 +144,12 @@ li {
       color: #fafafa;
       margin-bottom: 40px; }
   .hero__button {
+    position: relative;
+    z-index: 100;
+    margin-bottom: 60px;
     padding: 8px 24px;
     border: 2px solid #fafafa;
-    background-color: transparent;
-    margin-bottom: 60px; }
+    background-color: transparent; }
   .hero__button--link {
     color: #fafafa;
     font-family: "Karla", sans-serif;
@@ -218,7 +217,10 @@ li {
   margin: 0 auto;
   padding: 80px 20px;
   text-align: center;
-  background-color: #2d2640; }
+  background-color: #2d2640;
+  background-image: url(/images/bg-pattern-how-we-work-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top right; }
   .work__pattern {
     position: absolute;
     top: 0;
@@ -246,32 +248,21 @@ li {
       text-decoration: none; }
 
 .footer {
-  position: relative;
   margin-top: 140px;
   padding: 80px 20px;
   background-color: #fafafa;
   text-align: center;
-  font-size: 1.4rem; }
-  .footer__pattern {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10; }
-    @media only screen and (max-width: 320px) {
-      .footer__pattern {
-        left: -55px; } }
+  font-size: 1.4rem;
+  background-image: url(/images/bg-pattern-footer-mobile.svg);
+  background-repeat: no-repeat; }
   .footer__logo {
-    margin-bottom: 30px;
-    position: relative;
-    z-index: 100; }
+    margin-bottom: 30px; }
   .footer__social-networks {
     width: 40%;
     margin: 0 auto;
     margin-bottom: 40px;
     display: flex;
-    justify-content: space-between;
-    position: relative;
-    z-index: 90; }
+    justify-content: space-between; }
   .footer hr {
     border: 0;
     border-top: 0.5px solid #cecece; }

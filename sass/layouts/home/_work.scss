@@ -5,6 +5,9 @@
     padding: 80px 20px;
     text-align: center;
     background-color: $primary-color;
+    background-image: url(/images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
 
     &__pattern {
         position: absolute;

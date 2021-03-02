@@ -1,26 +1,14 @@
 .footer {
-    position: relative;
     margin-top: 140px;
     padding: 80px 20px;
     background-color: $light-gray-color;
     text-align: center;
     font-size: $font-size-copy;
-
-    &__pattern {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 10;
-
-        @include media (x-small-dev) {
-            left: -55px;
-        }
-    }
+    background-image: url(/images/bg-pattern-footer-mobile.svg);
+    background-repeat: no-repeat;
 
     &__logo {
         margin-bottom: 30px;
-        position: relative;
-        z-index: 100;
     }
 
     &__social-networks {
@@ -29,8 +17,6 @@
         margin-bottom: 40px;
         display: flex;
         justify-content: space-between;
-        position: relative;
-        z-index: 90;
     }
 
     hr {

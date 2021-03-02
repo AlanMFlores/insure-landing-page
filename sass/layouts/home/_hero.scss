@@ -2,11 +2,16 @@
     position: relative;
     width: 100vw;
     background-color: $primary-color;
+    background-image: url(/images/bg-pattern-intro-left-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 0;
+
 
     @include media (medium-dev) {
         display: flex;
         align-items: center;
         flex-direction: row-reverse;
+        background-image: none;
     }
 
 
@@ -37,25 +42,11 @@
         margin: 0 auto;
         text-align: center;
 
-        &--mobile-left {
-            position: absolute;
-            top: -60px;
-            left: 0;
-            z-index: 10;
-
-            @include media (medium-dev) {
-                top: -25px;
-            }
-
-            @include media (large-dev) {
-                display: none;
-            }
-        }
-
         &--mobile-right {
             position: absolute;
             right: 0;
             bottom: -200px;
+            z-index: 10;
 
             @include media (medium-dev) {
                 right: -100%;
@@ -69,9 +60,12 @@
         &--desktop-left {
             display: none;
 
-            @include media (large-dev) {
+            @include media (medium-dev) {
                 display: block;
                 position: absolute;
+                width: 20%;
+                left: 0;
+                top: 70%;
             }
         }
 
@@ -100,8 +94,10 @@
     }
 
     &__button {
-        @include btns;
+        position: relative;
+        z-index: 100;
         margin-bottom: 60px;   
+        @include btns;
     }
 
     &__button--link {

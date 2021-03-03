@@ -29,7 +29,7 @@ li {
   align-items: center; }
   @media only screen and (min-width: 992px) {
     .header {
-      padding: 10px 200px 20px 200px; } }
+      padding: 10px 140px 20px 140px; } }
   .header__menu {
     display: flex;
     align-items: center; }
@@ -51,23 +51,32 @@ li {
       font-size: 1.4rem; }
       .header__menu--list-item a {
         color: #837d87;
-        font-weight: 700; } }
+        font-weight: 700; }
+        .header__menu--list-item a:hover {
+          color: #2b272f; } }
   .header__menu--plans {
     display: none; }
     @media only screen and (min-width: 992px) {
       .header__menu--plans {
         display: block;
-        padding: 8px 24px;
+        padding: 8px 0px;
         border: 2px solid #fafafa;
         background-color: transparent;
         border: 2px solid #2b272f; }
+        .header__menu--plans:hover {
+          background-color: #2b272f;
+          color: #fafafa; }
         .header__menu--plans a {
+          padding: 8px 24px;
           color: #fafafa;
           font-family: "Karla", sans-serif;
           font-size: 1.4rem;
           letter-spacing: 0.5px;
           text-decoration: none;
-          color: #2b272f; } }
+          color: #2b272f; }
+          .header__menu--plans a:hover {
+            background-color: #2b272f;
+            color: #fafafa; } }
 
 .hero {
   position: relative;
@@ -81,7 +90,19 @@ li {
       display: flex;
       align-items: center;
       flex-direction: row-reverse;
-      background-image: none; } }
+      background-image: none;
+      height: 90vh; } }
+  @media only screen and (min-width: 992px) {
+    .hero {
+      padding: 0 140px; } }
+  .hero__hr-desktop {
+    display: none; }
+    @media only screen and (min-width: 992px) {
+      .hero__hr-desktop {
+        display: block;
+        width: 30%;
+        border: 0;
+        border-top: 1px solid #fafafa; } }
   .hero__image--mobile {
     object-fit: cover;
     width: 100%; }
@@ -94,12 +115,21 @@ li {
       .hero__image--desktop {
         display: block;
         width: 50%; } }
+    @media only screen and (min-width: 992px) {
+      .hero__image--desktop {
+        position: relative;
+        top: 20%; } }
   .hero__intro {
     position: relative;
     width: 100%;
     padding: 0 40px;
     margin: 0 auto;
     text-align: center; }
+    @media only screen and (min-width: 992px) {
+      .hero__intro {
+        padding: 0;
+        text-align: left;
+        margin-right: 40px; } }
     .hero__intro--mobile-right {
       position: absolute;
       right: 0;
@@ -117,15 +147,18 @@ li {
         .hero__intro--desktop-left {
           display: block;
           position: absolute;
-          width: 20%;
+          width: 15%;
           left: 0;
-          top: 70%; } }
+          top: 60%; } }
     .hero__intro--desktop-right {
       display: none; }
       @media only screen and (min-width: 992px) {
         .hero__intro--desktop-right {
           display: block;
-          position: absolute; } }
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 30%; } }
     .hero__intro--title {
       font-family: "DM Serif Display", sans-serif;
       font-size: 4rem;
@@ -136,6 +169,9 @@ li {
       margin: 60px 0 20px 0;
       position: relative;
       z-index: 100; }
+      @media only screen and (min-width: 992px) {
+        .hero__intro--title {
+          text-align: left; } }
     .hero__intro--description {
       font-family: "Karla", sans-serif;
       font-size: 1.4rem;
@@ -147,21 +183,33 @@ li {
     position: relative;
     z-index: 100;
     margin-bottom: 60px;
-    padding: 8px 24px;
+    padding: 8px 0px;
     border: 2px solid #fafafa;
     background-color: transparent; }
   .hero__button--link {
+    padding: 8px 24px;
     color: #fafafa;
     font-family: "Karla", sans-serif;
     font-size: 1.4rem;
     letter-spacing: 0.5px;
     text-decoration: none; }
+    .hero__button--link:hover {
+      color: #2b272f;
+      background-color: #fafafa; }
 
 .features {
   margin-bottom: 140px; }
+  @media only screen and (min-width: 992px) {
+    .features {
+      padding: 140px 140px 40px 140px;
+      margin: 0; } }
   .features hr {
     margin: 140px auto 40px auto;
     width: 40%; }
+    @media only screen and (min-width: 992px) {
+      .features hr {
+        margin: 40px 0;
+        width: 15%; } }
   .features__title {
     font-family: "DM Serif Display", sans-serif;
     font-size: 4rem;
@@ -174,15 +222,28 @@ li {
     .features__title::after {
       content: " ";
       border-top: 1px solid #2b272f; }
+    @media only screen and (min-width: 992px) {
+      .features__title {
+        text-align: left; } }
+  @media only screen and (min-width: 992px) {
+    .features__container {
+      display: flex;
+      width: 100%; } }
   .features__process, .features__prices, .features__people {
     text-align: center;
     width: 90%;
     margin: 0 auto; }
+    @media only screen and (min-width: 992px) {
+      .features__process, .features__prices, .features__people {
+        margin-right: 40px; } }
+    @media only screen and (min-width: 992px) {
+      .features__process, .features__prices, .features__people {
+        text-align: left; } }
     .features__process--title {
       margin-top: 40px;
       font-family: "DM Serif Display", sans-serif;
       font-size: 2.4rem;
-      olor: #2b272f; }
+      color: #2b272f; }
     .features__process--description, .features__prices--description, .features__people--description {
       margin: 20px auto 60px auto;
       color: #837d87;
@@ -194,17 +255,20 @@ li {
     margin-top: 40px;
     font-family: "DM Serif Display", sans-serif;
     font-size: 2.4rem;
-    olor: #2b272f; }
+    color: #2b272f; }
   .features__prices--description {
     font-family: "Karla", sans-serif;
     font-size: 1.4rem;
     line-height: 1.5;
     letter-spacing: 0.5px; }
+  @media only screen and (min-width: 992px) {
+    .features__people {
+      margin: 0; } }
   .features__people--title {
     margin-top: 40px;
     font-family: "DM Serif Display", sans-serif;
     font-size: 2.4rem;
-    olor: #2b272f; }
+    color: #2b272f; }
   .features__people--description {
     font-family: "Karla", sans-serif;
     font-size: 1.4rem;
@@ -212,7 +276,6 @@ li {
     letter-spacing: 0.5px; }
 
 .work {
-  position: relative;
   width: 90%;
   margin: 0 auto;
   padding: 80px 20px;
@@ -221,31 +284,46 @@ li {
   background-image: url(/images/bg-pattern-how-we-work-mobile.svg);
   background-repeat: no-repeat;
   background-position: top right; }
+  @media only screen and (min-width: 992px) {
+    .work {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 80%; } }
   .work__pattern {
     position: absolute;
     top: 0;
-    right: 0;
-    z-index: 10; }
+    right: 0; }
   .work__title {
     position: relative;
-    z-index: 100;
     font-family: "DM Serif Display", sans-serif;
     font-size: 4rem;
     line-height: 1.1;
     color: #fafafa;
     font-weight: 400;
     text-align: center; }
+    @media only screen and (min-width: 992px) {
+      .work__title {
+        width: 40%;
+        text-align: left; } }
   .work__button {
     margin-top: 40px;
-    padding: 8px 24px;
+    padding: 8px 0px;
     border: 2px solid #fafafa;
     background-color: transparent; }
+    @media only screen and (min-width: 992px) {
+      .work__button {
+        margin: 0; } }
     .work__button--link {
+      padding: 8px 24px;
       color: #fafafa;
       font-family: "Karla", sans-serif;
       font-size: 1.4rem;
       letter-spacing: 0.5px;
       text-decoration: none; }
+      .work__button--link:hover {
+        color: #2b272f;
+        background-color: #fafafa; }
 
 .footer {
   margin-top: 140px;
@@ -255,6 +333,14 @@ li {
   font-size: 1.4rem;
   background-image: url(/images/bg-pattern-footer-mobile.svg);
   background-repeat: no-repeat; }
+  @media only screen and (min-width: 992px) {
+    .footer {
+      margin-top: 80px; } }
+  @media only screen and (min-width: 992px) {
+    .footer__head {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 140px; } }
   .footer__logo {
     margin-bottom: 30px; }
   .footer__social-networks {
@@ -263,11 +349,29 @@ li {
     margin-bottom: 40px;
     display: flex;
     justify-content: space-between; }
+    @media only screen and (min-width: 992px) {
+      .footer__social-networks {
+        margin: 0;
+        display: block;
+        width: auto; }
+        .footer__social-networks img {
+          margin-left: 10px; }
+          .footer__social-networks img:hover {
+            filter: hue-rotate(120); } }
   .footer hr {
     border: 0;
     border-top: 0.5px solid #cecece; }
+  @media only screen and (min-width: 992px) {
+    .footer__container {
+      display: flex;
+      justify-content: start;
+      text-align: left;
+      padding: 0 140px; } }
   .footer__company, .footer__help, .footer__contact, .footer__others {
     margin: 40px auto 30px; }
+    @media only screen and (min-width: 992px) {
+      .footer__company, .footer__help, .footer__contact, .footer__others {
+        margin: 40px 160px 30px 0; } }
     .footer__company--title, .footer__help--title, .footer__contact--title, .footer__others--title {
       margin-bottom: 20px;
       font-weight: 700;
@@ -277,6 +381,8 @@ li {
       text-transform: uppercase;
       font-weight: 700;
       color: #2b272f; }
+      .footer__company--list-item a:hover, .footer__help--list-item a:hover, .footer__contact--list-item a:hover, .footer__others--list-item a:hover {
+        text-decoration: underline; }
 
 .attribution {
   margin-top: 80px; }

@@ -7,6 +7,18 @@
     background-image: url(/images/bg-pattern-footer-mobile.svg);
     background-repeat: no-repeat;
 
+    @include media (large-dev) {
+        margin-top: 80px;
+    }
+
+    &__head {
+        @include media (large-dev) {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 140px;
+        }
+    }
+
     &__logo {
         margin-bottom: 30px;
     }
@@ -17,6 +29,20 @@
         margin-bottom: 40px;
         display: flex;
         justify-content: space-between;
+
+        @include media (large-dev){
+            margin: 0;
+            display: block;
+            width: auto;
+
+            img {
+                margin-left: 10px;
+
+                &:hover {
+                    filter: hue-rotate(120);
+                }
+            }
+        }
     }
 
     hr {
@@ -24,8 +50,22 @@
         border-top: 0.5px solid #cecece;
     }
 
+    &__container {
+
+        @include media (large-dev) {
+            display: flex;
+            justify-content: start;
+            text-align: left;
+            padding: 0 140px;
+        }
+    }
+
     &__company {
         margin: 40px auto 30px;
+
+        @include media (large-dev) {
+            margin: 40px 160px 30px 0;
+        }
 
         &--title {
             margin-bottom: 20px;
@@ -37,7 +77,12 @@
             margin-bottom: 10px;
             text-transform: uppercase;
             font-weight: 700;
-            color: $dark-color
+            color: $dark-color;
+
+            a:hover {
+                text-decoration: underline
+            }
+
         }
     }
      

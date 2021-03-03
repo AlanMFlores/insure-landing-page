@@ -10,7 +10,7 @@
 @mixin subtitles {
     font-family: $font-family-title;
     font-size: $font-size-subtitle;
-    olor: $dark-color;
+    color: $dark-color;
 }
 
 @mixin copy {
@@ -21,12 +21,13 @@
 }
 
 @mixin btns {
-    padding: 8px 24px;
+    padding: 8px 0px;
     border: 2px solid $light-gray-color;
     background-color: transparent;
 }
 
 @mixin btn-name {
+    padding: 8px 24px;
     color: $light-gray-color;
     font-family: $font-family-copy;
     font-size: $font-size-copy;

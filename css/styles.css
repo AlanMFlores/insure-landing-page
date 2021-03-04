@@ -21,6 +21,7 @@ li {
   list-style: none; }
 
 .header {
+  position: relative;
   width: 100vw;
   height: auto;
   padding: 10px 20px 20px 20px;
@@ -38,6 +39,45 @@ li {
     @media only screen and (min-width: 992px) {
       .header__menu--hamburger {
         display: none; } }
+  .header__responsive {
+    padding: 40px;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 51px;
+    left: -100vw;
+    z-index: 150;
+    text-align: center;
+    background-color: #2b272f;
+    transform: translate3d(100vw); }
+    @media only screen and (min-width: 992px) {
+      .header__responsive {
+        display: none; } }
+    .header__responsive--list-item {
+      margin: 40px 0; }
+      .header__responsive--list-item a {
+        font-family: "Karla", sans-serif;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+        font-weight: 700;
+        color: #fafafa;
+        text-transform: uppercase; }
+    .header__responsive--button {
+      width: 100%;
+      padding: 8px 0px;
+      border: 2px solid #fafafa;
+      background-color: transparent; }
+      @media only screen and (min-width: 768px) {
+        .header__responsive--button {
+          width: 40%; } }
+      .header__responsive--button a {
+        padding: 8px 24px;
+        color: #fafafa;
+        font-family: "Karla", sans-serif;
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+        text-decoration: none; }
   .header__menu--list {
     display: none; }
     @media only screen and (min-width: 992px) {

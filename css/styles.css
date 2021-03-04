@@ -49,7 +49,7 @@ li {
     z-index: 150;
     text-align: center;
     background-color: #2b272f;
-    transform: translate3d(100vw); }
+    transition: 0.5s; }
     @media only screen and (min-width: 992px) {
       .header__responsive {
         display: none; } }
@@ -117,6 +117,11 @@ li {
           .header__menu--plans a:hover {
             background-color: #2b272f;
             color: #fafafa; } }
+
+.switch {
+  position: absolute;
+  left: 0;
+  transition: 0.5s; }
 
 .hero {
   position: relative;

@@ -1,6 +1,15 @@
-const toggle = document.querySelector('header__menu--hamburger');
-const menuResponsive = document.querySelector('haeder__responsive');
+const hamburger = document.querySelector('.header__menu--hamburger');
+const menu = document.querySelector('.header__responsive');
 
-function() {
-    toggle.addEventListener(onclick)
-}
+
+hamburger.addEventListener('click', ()=>{
+    menu.classList.toggle('switch')
+})
+
+window.addEventListener('click', e=> {
+    if(menu.classList.contains('switch') && e.target != menu && e.target != hamburger) {
+    
+        menu.classList.toggle('switch')
+
+    }
+})
